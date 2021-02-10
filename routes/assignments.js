@@ -26,11 +26,11 @@ function postAssignment(req, res){
     let assignment = new Assignment();
     assignment.id = req.body.id;
     assignment.nom = req.body.nom;
-    assignment.prenom = req.body.nom;
-    assignment.classe = req.body.nom;
-    assignment.professeur = req.body.nom;
-    assignment.photo = req.body.nom;
-    assignment.nomDevoir = req.body.nom;
+    assignment.prenom = req.body.prenom;
+    assignment.classe = req.body.classe;
+    assignment.professeur = req.body.professeur;
+    assignment.photo = req.body.photo;
+    assignment.nomDevoir = req.body.nomDevoir;
     assignment.dateDeRendu = req.body.dateDeRendu;
     assignment.rendu = req.body.rendu;
 
