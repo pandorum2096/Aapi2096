@@ -13,6 +13,7 @@ classe : String ,
 professeur : String ,
 photo : String ,
 nomDevoir : String ,
+note : String ,
 dateDeRendu: Date,
 rendu: Boolean
 });

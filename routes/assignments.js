@@ -31,6 +31,7 @@ function postAssignment(req, res){
     assignment.professeur = req.body.professeur;
     assignment.photo = req.body.photo;
     assignment.nomDevoir = req.body.nomDevoir;
+    assignment.note = req.body.note;
     assignment.dateDeRendu = req.body.dateDeRendu;
     assignment.rendu = req.body.rendu;
 
