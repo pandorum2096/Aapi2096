@@ -34,7 +34,7 @@ function postAssignment(req, res){
     assignment.note = req.body.note;
     assignment.dateDeRendu = req.body.dateDeRendu;
     assignment.rendu = req.body.rendu;
-    assignment.remarque = req.body.remarque;
+    assignment.remarques = req.body.remarques;
 
 
     console.log("POST assignment reçu :");

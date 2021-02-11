@@ -13,7 +13,7 @@ nomDevoir : String ,
 note : String ,
 dateDeRendu: Date,
 rendu: Boolean,
-remarque : String
+remarques : String
 });
 
 // C'est à travers ce modèle Mongoose qu'on pourra faire le CRUD
