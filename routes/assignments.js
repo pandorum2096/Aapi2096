@@ -32,6 +32,7 @@ function postAssignment(req, res){
     assignment.photo = req.body.photo;
     assignment.nomDevoir = req.body.nomDevoir;
     assignment.note = req.body.note;
+    assignment.remarque = req.body.remarque;
     assignment.dateDeRendu = req.body.dateDeRendu;
     assignment.rendu = req.body.rendu;
 

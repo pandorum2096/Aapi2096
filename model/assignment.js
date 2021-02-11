@@ -14,6 +14,7 @@ professeur : String ,
 photo : String ,
 nomDevoir : String ,
 note : String ,
+remarque : String ,
 dateDeRendu: Date,
 rendu: Boolean
 });
