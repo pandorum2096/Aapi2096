@@ -11,6 +11,7 @@ mongoose.Promise = global.Promise;
 
 // remplacer toute cette chaine par l'URI de connexion à votre propre base dans le cloud s
 const uri = 'mongodb+srv://toureabdouljunior:TOUre2096@cluster0.y4qhl.mongodb.net/assignments?retryWrites=true&w=majority';
+const uri2 = 'mongodb+srv://toureabdouljunior:TOUre2096@cluster0.y4qhl.mongodb.net/connexions?retryWrites=true&w=majority';
 //localhost
 //const uri2 = 'umongodb://localhost:27017/assignments';
 
@@ -24,11 +25,25 @@ mongoose.connect(uri, options)
   .then(() => {
     console.log("Connecté à la base MongoDB assignments dans le cloud !");
     console.log("at URI = " + uri);
-    console.log("vérifiez with http://localhost:8010/api/assignments ou http://localhost:8010/api/connexions que cela fonctionne")
+    console.log("vérifiez with http://localhost:8010/api/assignments que cela fonctionne")
     },
     err => {
       console.log('Erreur de connexion: ', err);
     });
+
+
+    mongoose.connect(uri2, options)
+    .then(() => {
+      console.log("Connecté à la base MongoDB connexions dans le cloud !");
+      console.log("at URI = " + uri2);
+      console.log("vérifiez with http://localhost:8010/api/connexions que cela fonctionne")
+      },
+      err => {
+        console.log('Erreur de connexion: ', err);
+      });
+
+
+
 
 
 // Pour accepter les connexions cross-domain (CORS)
