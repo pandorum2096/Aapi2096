@@ -3,7 +3,7 @@ let app = express();
 let bodyParser = require('body-parser');
 let assignment = require('./routes/assignments');
 
-let connexion = require('./routes/connexions');
+//let connexion = require('./routes/connexions');
 
 
 
@@ -63,7 +63,7 @@ app.route(prefix + '/assignments')
   .put(assignment.updateAssignment);
 
 
-/************************************************************************************************** */
+/*********************************************************************************
 app.route(prefix + '/connexions')
   .get(connexion.getConnexions);
 
@@ -76,7 +76,7 @@ app.route(prefix + '/connexions')
   .post(connexion.postAssignment)
   .put(connexion.updateConnexion);
 
-
+***************** */
 
 
 
