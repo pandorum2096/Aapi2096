@@ -65,7 +65,7 @@ app.route(prefix + '/assignments')
   .put(assignment.updateAssignment);
 
 //modifier
-app.use('/cust', customController);
+//app.use('/cust', customController);
 /*********************************************************************************
 app.route(prefix + '/connexions')
   .get(connexion.getConnexions);
