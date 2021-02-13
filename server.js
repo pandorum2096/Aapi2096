@@ -3,8 +3,6 @@ let app = express();
 let bodyParser = require('body-parser');
 let assignment = require('./routes/assignments');
 
-//modifier route pour aller dans le fichier custom.controller.js
-//let customController = require('./routes/custom.controller');
 //let connexion = require('./routes/connexions');
 
 
@@ -64,8 +62,6 @@ app.route(prefix + '/assignments')
   .post(assignment.postAssignment)
   .put(assignment.updateAssignment);
 
-//modifier
-//app.use('/cust', customController);
 /*********************************************************************************
 app.route(prefix + '/connexions')
   .get(connexion.getConnexions);
