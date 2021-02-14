@@ -4,7 +4,7 @@ let bodyParser = require('body-parser');
 let assignment = require('./routes/assignments');
 
 //
-let connexion = require('./routes/connexions');
+//let connexion = require('./routes/connexions');
 
 //modifier route pour aller dans le fichier custom.controller.js
 let customController = require('./routes/custom.controller');
