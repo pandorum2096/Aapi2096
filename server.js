@@ -3,9 +3,11 @@ let app = express();
 let bodyParser = require('body-parser');
 let assignment = require('./routes/assignments');
 
-//let connexion = require('./routes/connexions');
+//
+let connexion = require('./routes/connexions');
 
-
+//modifier route pour aller dans le fichier custom.controller.js
+let customController = require('./routes/custom.controller');
 
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
@@ -15,7 +17,7 @@ mongoose.Promise = global.Promise;
 const uri = 'mongodb+srv://toureabdouljunior:TOUre2096@cluster0.y4qhl.mongodb.net/assignments?retryWrites=true&w=majority';
 
 //localhost
-const uri2 = 'umongodb://localhost:27017/assignments';
+//const uri2 = 'umongodb://localhost:27017/assignments';
 
 const options = {
   useNewUrlParser: true,
@@ -56,6 +58,9 @@ app.route(prefix + '/assignments')
 app.route(prefix + '/assignments/:id')
   .get(assignment.getAssignment)
   .delete(assignment.deleteAssignment);
+
+  //modifier
+app.use('/cust', customController);
 
 
 app.route(prefix + '/assignments')
