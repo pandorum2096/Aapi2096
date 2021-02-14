@@ -3,10 +3,6 @@ let app = express();
 let bodyParser = require('body-parser');
 let assignment = require('./routes/assignments');
 
-//let connexion = require('./routes/connexions');
-
-//modifier route pour aller dans le fichier custom.controller.js
-//let customController = require('./routes/custom.controller');
 
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
@@ -49,7 +45,7 @@ app.use(bodyParser.json());
 let port = process.env.PORT || 8010;
 
 // les routes
-//const prefix = '/api';
+const prefix = '/api';
 
 app.route(prefix + '/assignments')
   .get(assignment.getAssignments);
