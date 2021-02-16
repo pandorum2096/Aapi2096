@@ -1,7 +1,11 @@
 let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
+//
 let assignment = require('./routes/assignments');
+//
+let connexion = require('./routes/connexions');
+//
 
 
 let mongoose = require('mongoose');
@@ -12,7 +16,7 @@ mongoose.Promise = global.Promise;
 const uri = 'mongodb+srv://toureabdouljunior:TOUre2096@cluster0.y4qhl.mongodb.net/assignments?retryWrites=true&w=majority';
 
 //localhost
-const uri2 = 'umongodb://localhost:27017/assignments';
+//const uri2 = 'umongodb://localhost:27017/assignments';
 
 const options = {
   useNewUrlParser: true,
@@ -25,6 +29,7 @@ mongoose.connect(uri, options)
     console.log("Connecté à la base MongoDB assignments dans le cloud !");
     console.log("at URI = " + uri);
     console.log("vérifiez with http://localhost:8010/api/assignments que cela fonctionne")
+    console.log("vérifiez with http://localhost:8010/api/connexions que cela fonctionne")
     },
     err => {
       console.log('Erreur de connexion: ', err);
@@ -59,20 +64,15 @@ app.route(prefix + '/assignments')
   .post(assignment.postAssignment)
   .put(assignment.updateAssignment);
 
-/*********************************************************************************
+
+/**********************************************************/
+
 app.route(prefix + '/connexions')
   .get(connexion.getConnexions);
 
-app.route(prefix + '/connexions/:id')
-  .get(connexion.getConnexion)
-  .delete(connexion.deleteConnexion);
 
 
-app.route(prefix + '/connexions')
-  .post(connexion.postAssignment)
-  .put(connexion.updateConnexion);
 
-***************** */
 
 
 
