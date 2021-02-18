@@ -36,10 +36,10 @@ mongoose.connect(uri, options)
   .then(() => {
     console.log("Connecté à la base MongoDB assignments dans le cloud !");
     console.log("at URI = " + uri);
-    console.log("vérifiez with http://localhost:8010/api/assignments que cela fonctionne")
-    console.log("vérifiez with http://localhost:8010/api/connexions que cela fonctionne")
-    console.log("vérifiez with http://localhost:8010/api/images que cela fonctionne")
-    console.log("vérifiez with http://localhost:8010/api/profiles que cela fonctionne")
+    console.log("vérifiez with https://api2096.herokuapp.com/api/assignments que cela fonctionne")
+    console.log("vérifiez with https://api2096.herokuapp.com/api/connexions que cela fonctionne")
+    console.log("vérifiez with https://api2096.herokuapp.com/api/images que cela fonctionne")
+    console.log("vérifiez with https://api2096.herokuapp.com/api/profiles que cela fonctionne")
     },
     err => {
       console.log('Erreur de connexion: ', err);
