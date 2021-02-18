@@ -6,14 +6,22 @@ let assignment = require('./routes/assignments');
 //
 let connexion = require('./routes/connexions');
 //
-
-
+const profilesRoutes = require('./routes/profiles');
+//
 let mongoose = require('mongoose');
+
+const path = require('path');
+const cors = require('cors');
+
+
+
+
+
 mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);
 
 // remplacer toute cette chaine par l'URI de connexion à votre propre base dans le cloud s
-const uri = 'mongodb+srv://toureabdouljunior:TOUre2096@cluster0.y4qhl.mongodb.net/assignments?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://toureabdouljunior:TOUre2096@cluster0.y4qhl.mongodb.net/mean?retryWrites=true&w=majority';
 
 //localhost
 //const uri2 = 'umongodb://localhost:27017/assignments';
@@ -30,6 +38,8 @@ mongoose.connect(uri, options)
     console.log("at URI = " + uri);
     console.log("vérifiez with http://localhost:8010/api/assignments que cela fonctionne")
     console.log("vérifiez with http://localhost:8010/api/connexions que cela fonctionne")
+    console.log("vérifiez with http://localhost:8010/api/images que cela fonctionne")
+    console.log("vérifiez with http://localhost:8010/api/profiles que cela fonctionne")
     },
     err => {
       console.log('Erreur de connexion: ', err);
@@ -46,6 +56,8 @@ app.use(function (req, res, next) {
 // Pour les formulaires
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(cors());
+
 
 let port = process.env.PORT || 8010;
 
@@ -65,15 +77,15 @@ app.route(prefix + '/assignments')
   .put(assignment.updateAssignment);
 
 
-/**********************************************************/
+/****************************connexions******************************/
 
 app.route(prefix + '/connexions')
   .get(connexion.getConnexions);
 
+/***********************************profiles******************************** */
+app.use('/images', express.static(path.join('images')));
 
-
-
-
+app.use('/api/profiles', profilesRoutes);
 
 
 
