@@ -21,7 +21,7 @@ mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);
 
 // remplacer toute cette chaine par l'URI de connexion à votre propre base dans le cloud s
-const uri = 'mongodb+srv://toureabdouljunior:TOUre2096@cluster0.y4qhl.mongodb.net/mean?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://toureabdouljunior:TOUre2096@cluster0.y4qhl.mongodb.net/assignments?retryWrites=true&w=majority';
 
 //localhost
 //const uri2 = 'umongodb://localhost:27017/assignments';
