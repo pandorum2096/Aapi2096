@@ -7,7 +7,8 @@ exports.getProfiles = async (req, res) => {
 
 exports.postProfile = async (req, res) => {
   const { name } = req.body;
-  const imagePath = 'https://api2096.herokuapp.com/api/images/' + req.file.filename; // Note: set path dynamically
+  //const imagePath = 'http://localhost:8010/images/' + req.file.filename; // Note: set path dynamically
+  const imagePath = 'https://api2096.herokuapp.com/images/' + req.file.filename; // Note: set path dynamically
   const profile = new Profile({
     name,
     imagePath,
