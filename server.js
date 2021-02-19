@@ -38,7 +38,7 @@ mongoose.connect(uri, options)
     console.log("at URI = " + uri);
     console.log("vérifiez with https://api2096.herokuapp.com/api/assignments que cela fonctionne")
     console.log("vérifiez with https://api2096.herokuapp.com/api/connexions que cela fonctionne")
-    console.log("vérifiez with https://api2096.herokuapp.com/api/images que cela fonctionne")
+    console.log("vérifiez with https://api2096.herokuapp.com/images que cela fonctionne")
     console.log("vérifiez with https://api2096.herokuapp.com/api/profiles que cela fonctionne")
     },
     err => {
