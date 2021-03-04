@@ -1,6 +1,18 @@
 let Assignment = require('../model/assignment');
 
-/// AVEC PAGINATION
+// Récupérer tous les assignments (GET)
+/*function getAssignments(req, res){
+    Assignment.find((err, assignments) => {
+        if(err){
+            res.send(err)
+        }
+
+        res.send(assignments);
+    });
+}*/
+
+
+// AVEC PAGINATION
 function getAssignments(req, res) {
     var aggregateQuery = Assignment.aggregate();
     Assignment.aggregatePaginate(
