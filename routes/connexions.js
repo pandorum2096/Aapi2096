@@ -7,7 +7,7 @@ function getConnexions(req, res){
             res.send(err)
         }
 
-        res.send(connexions);
+        res.json(connexions);
     });
 }
 
